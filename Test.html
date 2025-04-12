@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>멋사 영화</title>
     <style>
         .Top-bar{
@@ -15,7 +16,7 @@
             margin-left: 100px;
         }
         .menu{
-            margin-right: 100px;
+            margin-right: 200px;
             white-space: nowrap;
             overflow-x: auto;
         }
@@ -32,13 +33,22 @@
             justify-content: center;
             align-items: center;
         }
+        .main-image{
+            opacity: 0.5;
+        }
+        .main-image-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .main-list{
-            width: 500px;
+            width: 1000px;
             height: 400px;
-            border: 1px solid black;
+            margin-top: 50px;
         }
         .movie-date{
-            width: 60px;
+            width: 100px;
             height: 20px;
             border: 1px solid black;
             border-radius: 5px;
@@ -55,28 +65,36 @@
     <header>
         <div class="Top-bar">
             <div class="logo">
-                <img src="logo.png" alt="logo">
+                <img src="logo.png" alt="logo" style="margin-left: 200px; width: 300px; height: 50px;">
             </div>
-            <div class="menu">
-                <a href="movie_list.html"><span>영화리스트</span></a>
-                <a href="domestic_movie.html"><span>국내영화</span></a>
-                <a href="foreign_movie.html"><span>외국영화</span></a>
-                <a href="theater_list.html"><span>전국영화관</span></a>
-                <a href="news.html"><span>최근기사</span></a>
-                <a href="blog.html"><span>블로그</span></a>
-            </div>
+            <nav>
+                <div class="menu">
+                    <a href="movie_list.html"><span>영화리스트</span></a>
+                    <a href="domestic_movie.html"><span>국내영화</span></a>
+                    <a href="foreign_movie.html"><span>외국영화</span></a>
+                    <a href="theater_list.html"><span>전국영화관</span></a>
+                    <a href="news.html"><span>최근기사</span></a>
+                    <a href="blog.html"><span>블로그</span></a>
+                </div>
+            </nav>
         </div>
     </header>
     <main>
         <div class="main-container">
             <div class="main-image">
-                <img src="bg.png" alt="main_image" style="display: block">
+                <div style="background-image: url(bg.jpg); width: 1700px; height: 300px;">
+                    <span class="main-image-text">
+                        <font style="font-weight: 900; color: #ff7710;">멋쟁이사자처럼</font>
+                        <br>
+                        <font style="font-weight: 900;">영화 조회 사이트</font>
+                    </span>
+                </div>
             </div>
             <div class="main-text">
                 <div class="main-list" style="position: relative;">
-                    <span style="position: absolute; top: 10px; left: 10px;">일별박스오피스 조회</span>
+                    <span style="position: absolute; top: 10px; left: 10px; font-weight: 900;">일별박스오피스 조회</span>
                     <input type="text" id="movie-date" class="movie-date" style="position: absolute; top: 10px; right: 120px;" placeholder="날짜 선택" onfocus="(this.type='date')" onblur="(this.type='text')">
-                    <button style="position: absolute; top: 10px; right: 10px; background-color: #ff7710;"><img src="search.png" alt="search">영화조회</button>
+                    <button style="position: absolute; top: 10px; right: 10px; background-color: #ff7710;color: white; border: 1px solid #ff7710; border-radius: 5px;"><i class="fa-solid fa-magnifying-glass"></i>영화조회</button>
                 </div>
             </div>
         </div>
