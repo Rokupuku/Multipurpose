@@ -28,6 +28,7 @@
         }
         .main-container{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -69,19 +70,19 @@
     <main>
         <div class="main-container">
             <div class="main-image">
-                <img src="main_image.png" alt="main_image">
+                <img src="bg.png" alt="main_image" style="display: block">
             </div>
             <div class="main-text">
                 <div class="main-list" style="position: relative;">
                     <span style="position: absolute; top: 10px; left: 10px;">일별박스오피스 조회</span>
                     <input type="text" id="movie-date" class="movie-date" style="position: absolute; top: 10px; right: 120px;" placeholder="날짜 선택" onfocus="(this.type='date')" onblur="(this.type='text')">
-                    <button style="position: absolute; top: 10px; right: 10px;"><img src="search.png" alt="search">영화조회</button>
+                    <button style="position: absolute; top: 10px; right: 10px; background-color: #ff7710;"><img src="search.png" alt="search">영화조회</button>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-
+        
     </footer>
 </body>
 </html>
