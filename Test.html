@@ -13,7 +13,7 @@
             padding: 40px;
         }
         .logo{
-            margin-left: 100px;
+            margin-left: 20px;
         }
         .menu{
             margin-right: 200px;
@@ -34,13 +34,15 @@
             align-items: center;
         }
         .main-image{
-            opacity: 0.5;
+            position: relative;
         }
         .main-image-text{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            font-weight: 900;
         }
         .main-list{
             width: 1000px;
@@ -83,11 +85,11 @@
         <div class="main-container">
             <div class="main-image">
                 <div style="background-image: url(bg.jpg); width: 1700px; height: 300px;">
-                    <span class="main-image-text">
+                    <div class="main-image-text">
                         <font style="font-weight: 900; color: #ff7710;">멋쟁이사자처럼</font>
                         <br>
                         <font style="font-weight: 900;">영화 조회 사이트</font>
-                    </span>
+                    </div>
                 </div>
             </div>
             <div class="main-text">
@@ -96,6 +98,36 @@
                     <input type="text" id="movie-date" class="movie-date" style="position: absolute; top: 10px; right: 120px;" placeholder="날짜 선택" onfocus="(this.type='date')" onblur="(this.type='text')">
                     <button style="position: absolute; top: 10px; right: 10px; background-color: #ff7710;color: white; border: 1px solid #ff7710; border-radius: 5px;"><i class="fa-solid fa-magnifying-glass"></i>영화조회</button>
                 </div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>@social</td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
     </main>
