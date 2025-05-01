@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $('#my-btn').on('click', function(){
-
         //input에서 값 가져오기
         let value = $('#input').val();
         $('#result').html(value);
