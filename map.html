@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./map.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0ac21061444c7f34a1c194e9d27e979=false"></script>
+    <title>SchedulePick Map</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./img/logo.png" alt="logo" class="header-logo">
+            <a href="cartegory1.html">카테고리1</a>
+            <a href="cartegory2.html">카테고리2</a>
+            <a href="cartegory3.html">카테고리3</a>
+            <a href="cartegory4.html">카테고리4</a>
+        </nav>
+        <div class="user-info">
+            <img src="./img/user.png" alt="user" class="user-icon">
+            <span class="user-name">김충</span>
+        </div>
+    </header>
+    <main>
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="map-floating-box">
+                <div class="map-floating-box-header">약속 장소 찾기</div>
+                <div class="map-floating-box-main">
+                    <div class="map-floating-box-main-user-info">
+                        <div class="map-floating-box-main-user-info-box">
+                            <a href="user-info.html"><img src="./img/user.png" class="user-icon"></a>
+                            <div class="user-info-address">경기도 성남시 중원구 무슨로 </div>
+                            <a href="recommended-path.html"><img src="./img/path.png" class="path-icon"></a>
+                        </div>
+                        <div class="map-floating-box-main-user-info-box">
+                            <a href="user-info.html"><img src="./img/user.png" class="user-icon"></a>
+                            <div class="user-info-address">경기도 성남시 중원구 무슨로 </div>
+                            <a href="recommended-path.html"><img src="./img/path.png" class="path-icon"></a>
+                        </div>
+                        <div class="map-floating-box-main-user-info-box">
+                            <a href="user-info.html"><img src="./img/user.png" class="user-icon"></a>
+                            <div class="user-info-address">경기도 성남시 중원구 무슨로 </div>
+                            <a href="recommended-path.html"><img src="./img/path.png" class="path-icon"></a>
+                        </div>
+                    </div>
+                    <div class="map-floating-box-main-more"><a href="more.html">??명 더보기</a></div>
+                    <div class="map-floating-box-main-search"><a href="search.html">약속 장소 찾기</a></div>
+                    <img src="./img/search-icon.png" alt="search-icon" class="search-icon">
+                    <p class="map-floating-box-main-path-text">경로 확인</p>
+                    <p class="map-floating-box-main-search-text">약속 장소 찾기 버튼을 눌러주세요.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="place-list-container">
+            <div class="place-list-banner">
+                <img src="./img/place-list-banner.png" alt="place-list-banner" class="place-list-banner-img">
+                <div class="place-list-banner-text-container">
+                    <div class="place-list-banner-title">
+                        <p>카페 야미</p>
+                    </div>
+                    <div class="place-list-banner-address">
+                        <p>경기도 성남시 중원구 무슨로</p>
+                    </div>
+                </div>
+            </div>
+            <div class="place-list-banner">
+                <img src="./img/place-list-banner.png" alt="place-list-banner" class="place-list-banner-img">
+                <div class="place-list-banner-text-container">
+                    <div class="place-list-banner-title">
+                        <p>카페 야미</p>
+                    </div>
+                    <div class="place-list-banner-address">
+                        <p>경기도 성남시 중원구 무슨로</p>
+                    </div>
+                </div>
+            </div>
+            <div class="place-list-banner">
+                <img src="./img/place-list-banner.png" alt="place-list-banner" class="place-list-banner-img">
+                <div class="place-list-banner-text-container">
+                    <div class="place-list-banner-title">
+                        <p>카페 야미</p>
+                    </div>
+                    <div class="place-list-banner-address">
+                        <p>경기도 성남시 중원구 무슨로</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./map.js"></script>
+</body>
+</html>
