@@ -41,13 +41,13 @@ nav > a:hover {
 #map {
     width: 100%;
     height: 1000px;
-    background-color: green;
+    z-index: 0;
 }
 
 .map-floating-box {
     box-sizing: border-box;
-    width: 400px;
-    height: 800px;
+    width: 350px;
+    height: 700px;
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
@@ -55,6 +55,7 @@ nav > a:hover {
     position: absolute;
     top: 50px;
     left: 50px;
+    z-index: 1;
 }
 
 .map-floating-box-header {
@@ -94,7 +95,7 @@ nav > a:hover {
 }
 
 .user-info-address {
-    width: 300px;
+    width: 250px;
     height: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -177,17 +178,30 @@ footer {
     width: 300px;
     height: 120px;
     background-color: white;
-    border: 1px solid gray;
+    border: 1px solid black;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: 10px;
+}
+
+.slider-arrow {
+    background-color: #827eff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .place-list-banner-img {    
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 .place-list-banner-title p {
