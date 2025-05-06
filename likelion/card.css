@@ -1,0 +1,56 @@
+.card {
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .card-front {
+        width: 600px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .card-front-top-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-front-name-container {
+        padding-left: 50px;
+    }
+
+    .card-front-name {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card-front-job {
+        font-size: 15px;
+    }
+    
+    .card-front-logo {
+        padding-left: 300px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    hr {
+        width: 500px;
+        border: 1px solid #ff7711;
+    }
+
+    .card-front-down-container {
+        padding-left: 50px;
+    }
