@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles/map.css">
+    <link rel="stylesheet" href="../assets/styles/puremap.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>SchedulePick Map</title>
 </head>
@@ -17,10 +17,10 @@
                 <div class="nav">
                     <nav>
                         <ul>
-                            <li><a href="#">카테고리1</a></li>
-                            <li><a href="#">카테고리2</a></li>
-                            <li><a href="#">카테고리3</a></li>
-                            <li><a href="#">카테고리4</a></li>
+                            <li><a href="#">내 캘린더</a></li>
+                            <li><a href="#">지도</a></li>
+                            <li><a href="#">친구</a></li>
+                            <li><a href="#">마이페이지</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -35,6 +35,17 @@
         <div class="map-container">
             <div id="map"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0ac21061444c7f34a1c194e9d27e979"></script>
+            <div class="map-floating-box">
+                <div class="map-floating-box-header">
+                    <input type="text" class="search-box" placeholder="주소 또는 장소를 입력해주세요">
+                    <button class="search-btn">아이콘</button>
+                </div>
+                <div class="map-floating-box-main">
+                    <img src="../assets/images/search-icon.png" alt="search-icon" class="search-icon">
+                    <p class="map-floating-box-main-path-text">경로 확인</p>
+                    <p class="map-floating-box-main-search-text">약속 장소 찾기 버튼을 눌러주세요.</p>
+                </div>
+            </div>
     <script src="../assets/javascripts/map.js"></script>
 </body>
 </html>
