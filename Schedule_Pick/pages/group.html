@@ -29,7 +29,6 @@
       </div>
     </header>
   </div>
-
   <div class="container">
     <form id="groupForm" class="form-section">
       <div class="left-panel">
@@ -37,34 +36,28 @@
           <label>그룹 이름</label>
           <input type="text" placeholder="그룹의 이름을 입력해주세요" id="groupName">
         </div>
-
         <div class="form-group">
           <label>소속</label>
           <input type="text" placeholder="그룹의 소속을 입력해주세요 ex) 백석대학교" id="affiliation">
         </div>
-
         <div class="form-group">
           <label>그룹 인원 <button type="button" id="addMember">+</button></label>
           <div class="group-members" id="memberList">
-            <!-- 예시 멤버 (삭제 버튼 포함) -->
             <div class="avatar" data-name="김다영"><img src="../assets/images/user.png" alt=""> 김다영 <button class="remove-member">×</button></div>
             <div class="avatar" data-name="박규태"><img src="../assets/images/user.png" alt=""> 박규태 <button class="remove-member">×</button></div>
             <div class="avatar" data-name="김충"><img src="../assets/images/user.png" alt=""> 김충 <button class="remove-member">×</button></div>
           </div>
         </div>
       </div>
-
       <div class="right-panel">
         <div class="form-group">
           <label>대표자</label>
           <select id="leaderSelect"></select>
         </div>
-
         <div class="form-group">
           <label>기본 거점 주소</label>
           <input type="text" placeholder="기본 모임장소를 설정해주세요" id="baseAddress">
         </div>
-
         <div class="form-group">
           <label>그룹 사진</label>
           <div class="image-upload">
@@ -73,7 +66,6 @@
             <button type="button" class="upload-button" onclick="document.getElementById('groupImage').click()">사진 업로드하기</button>
           </div>
         </div>
-
         <div class="form-group">
           <label>그룹 분류 / 그룹 생성 <button type="button" id="addCategory">+</button>
             <input type="color" id="categoryColor" value="#000000" />
@@ -87,14 +79,11 @@
         </div>
       </div>
     </form>
-
     <div class="button-group">
         <button type="submit" form="groupForm" class="submit">완료</button>
         <button type="button" class="cancel">취소</button>
       </div>
   </div>
-
-  <!-- 모달 창 -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -110,7 +99,6 @@
       </div>
     </div>
   </div>
-
   <script src="../assets/javascripts/group.js"></script>
 </body>
 </html>
