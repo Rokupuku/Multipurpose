@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Group from './components/Group';
+import Group from './grouppage/Group';
 import './App.css';
 import logoImage from './assets/images/SchedulePicklogo.png';
 import userImage from './assets/images/user.png';

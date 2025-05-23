@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import '../assets/styles/Group.css';
+import './Group.css';
 import userImage from '../assets/images/user.png';
 
 // 그룹 생성 페이지
 const Group = () => {
   // 기본 멤버 목록
-  const [members, setMembers] = useState(['김다영', '박규태', '김충']);
+  const [members, setMembers] = useState(['김다영', '박규태', '김충', '김가연', '장원영', '박성찬']);
 
   // 기본 카테고리 목록
   const [categories, setCategories] = useState([
@@ -40,7 +40,6 @@ const Group = () => {
 
   // 모달 열기
   const openModal = (title, action) => {
-    console.log('모달 열기:', title);
     setModalTitle(title);
     setModalInput('');
     setModalAction(() => action);
@@ -49,7 +48,6 @@ const Group = () => {
 
   // 모달 닫기
   const closeModal = () => {
-    console.log('모달 닫기');
     setIsModalOpen(false);
     setModalInput('');
     setModalAction(null);
@@ -57,7 +55,6 @@ const Group = () => {
 
   // 모달 확인
   const handleModalConfirm = () => {
-    console.log('모달 확인:', modalInput);
     if (modalInput.trim() && modalAction) {
       modalAction(modalInput.trim());
       closeModal();
@@ -166,14 +163,9 @@ const Group = () => {
             그룹 인원 
             <button 
               type="button" 
-              onClick={() => openModal("추가할 인원 이름을 입력하세요", addMember)}
-              style={{ 
-                background: 'none', 
-                border: 'none', 
-                color: '#7f76d1', 
-                fontSize: '20px',
-                cursor: 'pointer',
-                padding: '0 5px'
+              className="add-member-button"
+              onClick={() => {
+                openModal("추가할 인원 이름을 입력하세요", addMember);
               }}
             >
               +
@@ -232,17 +224,9 @@ const Group = () => {
             그룹 분류 / 그룹 생성
             <button 
               type="button" 
+              className="add-category-button"
               onClick={() => {
-                console.log('카테고리 추가 버튼 클릭');
                 openModal("그룹명을 입력하세요", addCategory);
-              }}
-              style={{ 
-                background: 'none', 
-                border: 'none', 
-                color: '#7f76d1', 
-                fontSize: '20px',
-                cursor: 'pointer',
-                padding: '0 5px'
               }}
             >
               +
@@ -276,35 +260,8 @@ const Group = () => {
       </form>
 
       {isModalOpen && (
-        <div 
-          className="modal" 
-          onClick={closeModal}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            zIndex: 9999
-          }}
-        >
-          <div 
-            className="modal-content" 
-            onClick={e => e.stopPropagation()}
-            style={{
-              backgroundColor: 'white',
-              padding: '20px',
-              borderRadius: '5px',
-              width: '400px',
-              maxWidth: '90%',
-              position: 'relative',
-              zIndex: 10000
-            }}
-          >
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h3>{modalTitle}</h3>
               <span className="close" onClick={closeModal}>&times;</span>
@@ -312,47 +269,24 @@ const Group = () => {
             <div className="modal-body">
               <input 
                 type="text" 
+                className="modal-input"
                 value={modalInput} 
                 onChange={(e) => setModalInput(e.target.value)} 
                 placeholder="입력해주세요"
                 onKeyPress={(e) => e.key === 'Enter' && handleModalConfirm()}
                 autoFocus
-                style={{
-                  width: '100%',
-                  padding: '10px',
-                  border: '1px solid #ddd',
-                  borderRadius: '4px',
-                  fontSize: '14px',
-                  boxSizing: 'border-box'
-                }}
               />
             </div>
             <div className="modal-footer">
               <button 
                 className="submit" 
                 onClick={handleModalConfirm}
-                style={{
-                  backgroundColor: '#7f76d1',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '4px',
-                  padding: '8px 16px',
-                  cursor: 'pointer'
-                }}
               >
                 확인
               </button>
               <button 
                 className="cancel" 
                 onClick={closeModal}
-                style={{
-                  backgroundColor: '#ddd',
-                  color: '#333',
-                  border: 'none',
-                  borderRadius: '4px',
-                  padding: '8px 16px',
-                  cursor: 'pointer'
-                }}
               >
                 취소
               </button>
