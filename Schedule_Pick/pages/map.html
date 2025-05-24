@@ -36,31 +36,70 @@
             <div id="map"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0ac21061444c7f34a1c194e9d27e979"></script>
             <div class="map-floating-box">
-                <div class="map-floating-box-header">약속 장소 찾기</div>
-                <div class="map-floating-box-main">
-                    <div class="map-floating-box-main-user-info">
-                        <div class="map-floating-box-main-user-info-box">
-                            <a href="user-info.html"><img src="../assets/images/user.png" class="user-icon"></a>
-                            <div class="user-info-address">경기도 성남시 중원구 무슨로 </div>
-                            <a href="recommended-path.html"><img src="../assets/images/path.png" class="path-icon"></a>
-                        </div>
-                        <div class="map-floating-box-main-user-info-box">
-                            <a href="user-info.html"><img src="../assets/images/user.png" class="user-icon"></a>
-                            <div class="user-info-address">경기도 성남시 중원구 무슨로 </div>
-                            <a href="recommended-path.html"><img src="../assets/images/path.png" class="path-icon"></a>
-                        </div>
-                        <div class="map-floating-box-main-user-info-box">
-                            <a href="user-info.html"><img src="../assets/images/user.png" class="user-icon"></a>
-                            <div class="user-info-address">경기도 성남시 중원구 무슨로 </div>
-                            <a href="recommended-path.html"><img src="../assets/images/path.png" class="path-icon"></a>
-                        </div>
-                    </div>
-                    <button id="more-btn" class="map-floating-box-main-more btn">??명 더보기</button>
-                    <button id="search-btn" class="map-floating-box-main-search btn">약속 장소 찾기</button>
-                    <img src="../assets/images/search-icon.png" alt="search-icon" class="search-icon">
-                    <p class="map-floating-box-main-path-text">경로 확인</p>
-                    <p class="map-floating-box-main-search-text">약속 장소 찾기 버튼을 눌러주세요.</p>
+              <div class="floating-header">
+                <span>약속 장소 찾기</span>
+              </div>
+              <div class="floating-users">
+                <div class="floating-user">
+                  <img src="../assets/images/user.png" class="user-icon" />
+                  <span class="user-address">경기도 수원시 어디구 무슨로 9-2</span>
+                  <img src="../assets/images/bus.png" class="transport-icon" />
                 </div>
+                <div class="floating-user">
+                  <img src="../assets/images/user.png" class="user-icon" />
+                  <span class="user-address">경기도 용인시 무슨구 여기로 90-2</span>
+                  <img src="../assets/images/bus.png" class="transport-icon" />
+                </div>
+                <div class="floating-user">
+                  <img src="../assets/images/user.png" class="user-icon" />
+                  <span class="user-address">경기도 용인시 무슨구 여기로 90-2</span>
+                  <img src="../assets/images/bus.png" class="transport-icon" />
+                </div>
+              </div>
+              <button class="more-btn">3명 더보기</button>
+              <button class="find-place-btn">약속 장소 찾기</button>
+              <div class="floating-timeline">
+                <div class="timeline-users">
+                  <img src="../assets/images/user.png" class="timeline-user" />
+                  <img src="../assets/images/user.png" class="timeline-user" />
+                  <img src="../assets/images/user.png" class="timeline-user" />
+                </div>
+                <div class="timeline-list">
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="timeline-title">경기도 수원시 어디구 무슨로 9-2 출발</div>
+                      <div class="timeline-desc">무슨동 주민센터 승차</div>
+                      <div class="timeline-detail">버스 123번</div>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="timeline-title">여기아파트, 이마트 승차</div>
+                      <div class="timeline-desc">버스 32423</div>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="timeline-title">여기아파트, 이마트 승차</div>
+                      <div class="timeline-desc">버스 32423</div>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="timeline-title">여기아파트, 이마트 승차</div>
+                      <div class="timeline-desc">버스 32423</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-bottom-btns">
+                <button class="back-btn">뒤로</button>
+                <button class="done-btn">완료</button>
+              </div>
             </div>
         </div>
     </main>
