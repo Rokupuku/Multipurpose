@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김충 자기소개 카드</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Segoe UI", "Apple SD Gothic Neo", sans-serif;
+      background: linear-gradient(135deg, #e0f2fe, #f0f9ff 45%, #dbeafe);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+      color: #0f172a;
+    }
+    .card-wrap {
+      width: 100%;
+      max-width: 980px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.15);
+      border: 1px solid #e2e8f0;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-front .top {
+      background: linear-gradient(135deg, #fe5b00, #ffd000);
+      color: #ffffff;
+      padding: 28px 26px 22px;
+    }
+    .label {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+    .name {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .major {
+      font-size: 17px;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+    .front-body {
+      padding: 24px 26px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .profile img {
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fe5b00;
+      background: #eff6ff;
+    }
+    .field h2,
+    .affiliation h2 {
+      font-size: 15px;
+      color: #fe5b00;
+      margin-bottom: 6px;
+    }
+    .field p,
+    .affiliation p {
+      font-size: 15px;
+      line-height: 1.55;
+      color: #334155;
+    }
+    .card-back {
+      background: white;
+      color: white;
+      padding: 30px 26px;
+      position: relative;
+    }
+    .back-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .back-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 4px;
+    }
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+    .info-list li {
+      background: #fe5b00;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 12px;
+      padding: 12px 14px;
+      line-height: 1.45;
+      font-size: 15px;
+    }
+    .info-list strong {
+      color: #ffee00;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card-wrap">
+    <section class="card card-front" aria-label="명함 앞면">
+      <div class="top">
+        <span class="label">LIKE LION 14기</span>
+        <h1 class="name">Kim Chung</h1>
+        <p class="major">백석대학교 컴퓨터공학부 소프트웨어전공</p>
+      </div>
+      <div class="front-body">
+        <div class="profile">
+          <img
+            src="/증명사진.PNG"
+            alt="김충 프로필 이미지"
+          />
+          <p style="font-size: 11px;">인터랙티브한 경험을 지향하는 프론트엔드 개발자입니다.</p>
+        </div>
+        <article class="field">
+          <h2>활동 분야</h2>
+          <p>Front-End</p>
+        </article>
+        <article class="affiliation">
+          <h2>소속</h2>
+          <p>백석대학교 멋쟁이사자처럼 아기사자 프론트엔드 14기</p>
+        </article>
+      </div>
+    </section>
+    <section class="card card-back" aria-label="명함 뒷면">
+      <div class="back-content">
+        <ul class="info-list">
+          <li><strong>이름</strong>김충</li>
+          <li><strong>활동 분야</strong>Front-End</li>
+          <li><strong>전화번호</strong> 010-9728-9335</li>
+          <li><strong>이메일</strong> kc012800@gmail.com</li>
+          <img src="/likelion.avif" style="width: 400px; height: 120px;" alt="LIKE LION 14기 로고" />
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
