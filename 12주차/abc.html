@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Hello CSS</p>
+    <button onclick="textchange1()">btn1</button>
+    <button onclick="textchange2()">btn2</button>
+
+    <p id="rst">0</p>
+    <button onclick="result()">btn</button>
+
+    <br>
+    <input id="ttt" type="text">
+    <button onclick="t()">검사</button>
+
+    <div class="box">Hello CSS</div>
+    
+    <button onclick="a()">btn3</button>
+    <p id="tt1">text</p>
+    <script>
+        function textchange1() {
+            document.getElementById("text").innerText = "Hi CSS";
+        }
+
+        function textchange2() {
+            document.getElementById("text").innerText = "Hello CSS";
+        }
+
+        function result() {
+            const scores = [80, 90, 70, 95, 85];
+            let sum = 0;
+
+            for (let i = 0; i < scores.length; i++) {
+                sum += scores[i];
+            }
+
+            let avg = sum / scores.length;
+
+            document.getElementById("rst").innerText = avg;
+        }
+
+        function t() {
+            const value = document.getElementById("ttt").value;
+
+            if (value === "") alert("빈칸을 채우세요.");
+        }
+
+        function a() {
+            const name = prompt("이름을 입력하세요");
+            document.getElementById("tt1").innerHTML = "Welcome" + name;
+        }
+    </script>
+</body>
+</html>
