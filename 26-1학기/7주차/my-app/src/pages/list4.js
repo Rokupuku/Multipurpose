@@ -1,10 +1,10 @@
-function list4() {
-    return (
-      <div>
-        <h1>4</h1>
-      </div>
-    );
-  }
-  
-  export default list4;
-  
+import ListPage from './ListPage';
+
+const BASE_PATH = '/list4';
+
+function List4() {
+  return <ListPage basePath={BASE_PATH} />;
+}
+
+export default List4;
+export { BASE_PATH as list4BasePath };

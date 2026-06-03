@@ -1,10 +1,10 @@
-function list3() {
-    return (
-      <div>
-        <h1>3</h1>
-      </div>
-    );
-  }
-  
-  export default list3;
-  
+import ListPage from './ListPage';
+
+const BASE_PATH = '/list3';
+
+function List3() {
+  return <ListPage basePath={BASE_PATH} />;
+}
+
+export default List3;
+export { BASE_PATH as list3BasePath };
