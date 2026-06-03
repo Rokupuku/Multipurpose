@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# 아기 사자 대시보드 (9주차 · TypeScript + Supabase)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 사전 준비
 
-## Available Scripts
+1. [Supabase](https://supabase.com) 프로젝트 생성
+2. SQL Editor에서 `supabase/schema.sql` 실행
+3. Authentication → Sign In / Providers → **Confirm email** OFF (개발용 권장)
+4. `.env.example`을 복사해 `.env.local` 생성 후 값 입력:
 
-In the project directory, you can run:
+```env
+VITE_SUPABASE_URL=https://xxxx.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
 
-### `npm start`
+`.env.local`은 Git에 커밋하지 마세요.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 실행
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+yarn install
+yarn dev      # http://localhost:5173
+yarn build    # tsc && vite build
+yarn typecheck
+```
 
-### `npm test`
+## 디렉터리 구조
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+├── lib/supabase.ts       # Supabase 클라이언트 (Database 제네릭)
+├── types/
+│   ├── database.ts       # DB 스키마 타입
+│   └── lion.ts           # Lion 앱 타입 · props
+├── data/lions.ts         # rowToLion / formToLionInsert 변환
+├── hooks/
+│   ├── useAuth.ts
+│   ├── useLions.ts
+│   └── useViewOptions.ts
+├── pages/
+│   ├── HomePage.tsx
+│   ├── DetailPage.tsx
+│   └── LoginPage.tsx
+└── components/
+    ├── AuthForm.tsx
+    └── ...
+```
 
-### `npm run build`
+## 기능 요약
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 비로그인: 명단 **조회** (Supabase)
+- 로그인: 추가·삭제·랜덤 추가 (DB 반영)
+- `/login` 회원가입·로그인, 세션 유지·로그아웃
+- URL 쿼리 필터/정렬/검색 유지
